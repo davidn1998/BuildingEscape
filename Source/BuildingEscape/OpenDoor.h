@@ -17,15 +17,25 @@ class BUILDINGESCAPE_API UOpenDoor : public UActorComponent
 private:
 	float CurrentYaw;
 	float ClosedYaw;
+	float DoorLastOpened = 0.f;
 
 	UPROPERTY(EditAnywhere)
-	float OpenYaw = 90.f;
+	float OpenAngle = 90.f;
 
 	UPROPERTY(EditAnywhere)
-	float DoorSpeed = 1.f;
+	float DoorOpenSpeed = 1.f;
+
+	UPROPERTY(EditAnywhere)
+	float DoorCloseSpeed = 1.f;
+
+	UPROPERTY(EditAnywhere)
+	float DoorCloseDelay = 2.f;
 
 	UPROPERTY(EditAnywhere)
 	ATriggerVolume* PressurePlate;
+
+	UPROPERTY(EditAnywhere)
+	AActor* ActorThatOpens;
 
 public:	
 	// Sets default values for this component's properties
@@ -39,5 +49,7 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-		
+	void OpenDoor(float DeltaTime);
+	void CloseDoor(float DeltaTime);
+
 };
