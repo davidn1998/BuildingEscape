@@ -1,5 +1,6 @@
 {
 	"files.exclude": {
+		"D:/Unreal Game Dev/repos/BuildingEscape/.git": true,
 		"D:/Unreal Game Dev/repos/BuildingEscape/.vscode": true,
 		"D:/Unreal Game Dev/repos/BuildingEscape/Content": true,
 		"D:/Unreal Game Dev/repos/BuildingEscape/DerivedDataCache": true,
