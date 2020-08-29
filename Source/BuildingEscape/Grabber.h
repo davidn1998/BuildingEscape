@@ -36,6 +36,10 @@ public:
 	// Returns the first Actor within reach with a Phyics body
 	FHitResult GetFirstPhysicsBodyInReach() const;
 
+	// Returns the line trace end
+	FVector GetPlayerReach() const;
+	FVector GetPlayerWorldPosition() const;
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
