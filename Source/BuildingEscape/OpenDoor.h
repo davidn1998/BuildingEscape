@@ -37,9 +37,6 @@ private:
 	UPROPERTY(EditAnywhere)
 	ATriggerVolume* PressurePlate = nullptr;
 
-	UPROPERTY(EditAnywhere)
-	AActor* ActorThatOpens = nullptr;
-
 public:	
 	// Sets default values for this component's properties
 	UOpenDoor();
