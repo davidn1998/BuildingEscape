@@ -20,6 +20,9 @@ private:
 	float DoorLastOpened = 0.f;
 
 	UPROPERTY(EditAnywhere)
+	float MassToOpenDoor = 50.f;
+
+	UPROPERTY(EditAnywhere)
 	float OpenAngle = 90.f;
 
 	UPROPERTY(EditAnywhere)
@@ -32,10 +35,10 @@ private:
 	float DoorCloseDelay = 2.f;
 
 	UPROPERTY(EditAnywhere)
-	ATriggerVolume* PressurePlate;
+	ATriggerVolume* PressurePlate = nullptr;
 
 	UPROPERTY(EditAnywhere)
-	AActor* ActorThatOpens;
+	AActor* ActorThatOpens = nullptr;
 
 public:	
 	// Sets default values for this component's properties
@@ -51,5 +54,6 @@ public:
 
 	void OpenDoor(float DeltaTime);
 	void CloseDoor(float DeltaTime);
+	float TotalMassOfActors() const;
 
 };
